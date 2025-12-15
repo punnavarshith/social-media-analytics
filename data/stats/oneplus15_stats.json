@@ -1,0 +1,115 @@
+{
+  "topic": "Oneplus15",
+  "total_posts": 36,
+  "date_computed": "2025-12-13T00:55:32.815754",
+  "engagement": {
+    "average": 70.11111111111111,
+    "median": 12.5,
+    "max": 638.0,
+    "min": 1.0,
+    "std": 143.66524140271923,
+    "top_25_percent": 43.75,
+    "top_10_percent": 198.5
+  },
+  "sentiment": {
+    "average_polarity": 0.10357875537622319,
+    "positive_posts": 19,
+    "negative_posts": 1,
+    "neutral_posts": 16
+  },
+  "timing": {
+    "best_hours": {
+      "13": 591.5,
+      "19": 213.0,
+      "6": 184.0,
+      "21": 182.0,
+      "11": 40.0
+    },
+    "best_days": {
+      "Friday": 146.85714285714286,
+      "Monday": 132.66666666666666,
+      "Tuesday": 61.2
+    },
+    "worst_hours": {
+      "4": 1.0,
+      "15": 3.0,
+      "2": 3.5
+    }
+  },
+  "content": {
+    "avg_length": 635.9444444444445,
+    "avg_words": 111.52777777777777,
+    "hashtag_usage": 2.7777777777777777,
+    "url_usage": 13.88888888888889,
+    "emoji_usage": 2.7777777777777777
+  },
+  "impact": {
+    "hashtag_boost": {
+      "with": 1.0,
+      "without": 72.08571428571429,
+      "improvement_pct": -98.61276258422514
+    },
+    "url_impact": {
+      "with": 149.0,
+      "without": 57.38709677419355,
+      "improvement_pct": 159.64024732996063
+    },
+    "emoji_impact": {
+      "with": 26.0,
+      "without": 71.37142857142857,
+      "improvement_pct": -63.570856685348275
+    }
+  },
+  "top_posts": [
+    {
+      "text": "Oppo has crippled the OnePlus even further. From the best vibration motor to mid range, replacing the upper \"micro\" speaker with the lower one, 165Hz instead of 120Hz will hardly be noticed by anyone but the 1.5K will. The camera is far behind the Realme GT 8 Pro and even behind the iQOO 15 and will be even worse at night than the OnePlus 12, not just the OP13. It's cheaper but only by 500 RMB, which is around \u20ac60. The 120W is slower than the 100W, which is never reached anyway, bc the battery has become significantly larger. \n\nOnePlus 13 >>> OnePlus 15\n\nDowngrade:\n- 2k >>> 1.5k (Display)\n- Hasselblad >>> LUMO\n- CSA0916B >>> ESA0816 (vibration motor/haptics)\n- 1/1.4 >>> 1/1.56 (Main camera)\n- 1/1.95 >>> 1/2.76 (Telephoto camera)\n\n\nUpgrade:\n- 1115E + 1012H >>> 1115E + 1115E (speaker)\n- 6000 mAh >>> 7300 mAh (battery)\n- Snapdragon 8 Elite > 8 Elite Gen2 (SoC)\n- 3x >>> 3.5x (tele zoom camera)\n- 3999 RMB >>> 4499 RMB \n\n\nNeutral:\n- 120Hz >>> 165Hz\n- micro quad curved >>> flat\n- 100W >>> 120W \n- 6.82 inch >>> 6.78 inch\n- Alert Slider >>> Plus Key\n- 5 Gbps USB >>> 5 Gbps USB\n\n\nIf Realme or iQOO had ColorOS I wouldn't even consider the OnePlus15 this year, because the Realme GT 8 Pro:\n- has a significantly better camera\n- costs the same\n- has the same vibration motor\n- and speakers\n\nWhat do you think? The Oppo Find X9 Pro is out of the question for me because of the speakers. There's hardly any difference between it and the Oppo Find X8 Pro, and those were anything but good. \n\n- AAC ESA0816 instead of CSA0916B\n- so same haptic feedback like the Oppo Find X9 Pro \n- Instead of 4 microphones, there are now only 3\n- Oppo Find X9 Pro even has 5\n- AAC1510+ AAC1510 instead of AAC1115E+ AAC1012H\n- sound is better than on Find X9 Pro\n- 0.89 cd/m\u00b2 minimum brightness\n- 720 cd/m\u00b2 manual brightness\n- 1682 cd/m\u00b2 auto brightness\n- 3400 cd/m\u00b2 peak brightness (20% of display area)\n- max./peak 72W when charging with 120W chargee\n- 42 min. from zero to 100%\n- Sony IMX906 1/1.5 f1.8 instead of IMX808 1/1.4 f1.6\n- main with OIS\n- Samsung SJK5JN5 1/2.75 f2.8 instead of IMX882 1/1.95 f2.6\n- tele with OIS\n- Omnivision OV50D 1/2.88 f2.0 instead of S5KJN5 1/2.75 f2.0\n- uw without OIS\n- IMX709 1/274 f2.4 instead of IMX615 1/2.74 f2.4\n- front without OIS \n\nSummary: There are two speakers of the same size and two\nslightly larger ones. We've gone from top-tier vibration to mid-range, which many\npeople might misunderstand, as it's on par with the Galaxy S25 Ultra. One\nmicrophone has been removed, so now there are only three, as with Honor or Poco.\nThe charging time has increased by almost 10 minutes compared to its predecessor\n(which was 34 minutes). ",
+      "engagement": 638,
+      "sentiment_polarity": 0.0794642857142857
+    },
+    {
+      "text": "Hope to see your verdict on the comparison, not an professional.\n\nFull list of photos in [https://imgur.com/a/vv5i4Ax](https://imgur.com/a/vv5i4Ax); reddit only allow max of 20 photos.",
+      "engagement": 545,
+      "sentiment_polarity": 0.15
+    },
+    {
+      "text": "I have it received the OP15 today, and for a normal user like I can say it is pretty fine, with better coloring than the S24U. \n\nI am no camera enthusiast so yeah... For me they look pretty fine with enough details. \n\nI will leave a photo of my cat in pretty low light. Only natural light from outside on a cloudy rainy day",
+      "engagement": 235,
+      "sentiment_polarity": 0.22380952380952382
+    },
+    {
+      "text": "Hey everyone,  \nI currently own a **Samsung Galaxy S22+** and I\u2019m getting pretty fed up with how it performs lately: the Exynos chip makes everything feel laggy, OneUI is getting bloated, it\u2019s overheating, battery life has tanked \u2014 even though I replaced the battery already.\n\nI\u2019m seriously considering moving to the **OnePlus 15**. I wasn\u2019t super impressed by the OnePlus 13\u2019s design (that circular camera module doesn\u2019t do it for me). But I like the look of the OnePlus 15 much more, and the 1.5 k screen isn\u2019t a dealbreaker \u2014 I care more about battery life & performance than highest res.\n\nA few questions that I\u2019m hoping some of you (especially former Samsung users) can help with:\n\n**Questions:**\n\n1. Is it true that OxygenOS is not as polished as Samsung\u2019s OneUI? What are the trade-offs?\n2. For those who have switched from Samsung \u2192 OnePlus (or vice versa): what critical features did you lose, or what new features on OnePlus did you find you really value?\n\nAppreciate any feedback from real users, thanks!",
+      "engagement": 213,
+      "sentiment_polarity": 0.21789772727272727
+    },
+    {
+      "text": "Even comparing to another affordable flagship with better specs than oneplus13, it hold it's ground and even beat it in some aspects.  \nOnly negative I see is in zoom in details and also low light condition.",
+      "engagement": 184,
+      "sentiment_polarity": 0.12000000000000002
+    },
+    {
+      "text": "RichTap Linear Actuators | RichTap Haptics https://share.google/pmqgWWh9dKQhF2Hsi\n\nThe OnePlus 15 has the AAC ESA1016 motor and the OnePlus 13 has the CSA01916.  \n\n",
+      "engagement": 172,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Only partially true, so would like to shred some light on it\n\nUpgrade:  \nTouch ic - 3910p -> 3910v - consider an upgrade since no specs officially (the issue here is 3910p started using since 4-5 years ago; 3910v is newer only featured last year; and just for reference, majority of x9 x9 pro, xiaomi 15, xiaomi 17 pro pro max, nubia z80 ultra, redmagic 11 pro, iqoo15, realme gt8pro, oneplus15 also uses s3910v.... from what I know 3910v might be the latest offering used in china flagship - can support up to 3000hz; used in redmagic as well)\n\nTop speaker upgrade 1012 -> 1510x ( New speaker never featured before) way bigger improvement and now symmetrical dual speaker... (FYI - the top speaker generally is usually weaker than bottom speaker; which is why its better to have stronger top speaker then bottom speaker to balanced the audio)\n\nProcessing algorithm -> upgrade. In my opinion 1+12/ 1+13 is the barebone hasselblad; LUMO imaging/ detailedmax engine is what Oppo created by incoporating color science of hasselblad and their own philosophy. This also allow 1+15 with poorer specs to even playing round with better specs like on iqoo15 & realme gt8pro\n\nAdditionally added another touch IC to allow for up to 3200hz instant/ 330hz multi area.\n\nAdded WiFi chip G2\n\nBattery - 1300mah more\n\nDDR5X Ultra/ Ultra+ - 12gb Ultra 9600hz, 16gb Ultra+ 10667hz (ram prices increased by 80-100% now about 40 bucks more expensive than previous years  \n\\--------------------------------------------------------------------------------\n\nDowngrade:  \nCamera - now same specs as oneplus 11, definitely a downgrade in terms of hardware; especially for low light situations\n\nHaptics -> downgrade but wrong info from 0916t to 0816(enhanced version); its basically a bit smaller 0816 = 08x16, from 0916 (09x16) - they standardish it for Oppo Find X9 Pro, Realme and 1+ probably to buying in bulk to save cost\n\nMic 4->3 downgrade (the mic used to be in the camera deco but now infrared blaster is now there on original mic spot; because of top speaker upgrade from 1012 -> 1510x no more space for infrared blaster up top)  \n\\------------------------------------------------  \nNeutral:  \nBottom speaker 1115E -> 1510X - its a downgrade (because 15x10 is still smaller than 11x15) but it can convert to an upgrade at the same time because the top speaker went from 1012-> 1510x, this is in order to balanced the audio symmetrical speaker + top speaker is usually weaker than bottom speaker so 1115E have to go away.\n\nScreen 2k 120hz -> neutral 1.5k 165hz (you lose about 50 ppi but you get about 10% battery life; standby consumption of oneplus 13 is 3.3w, oneplus 15 is about 3w)\n\nAmbient light sensor 2 -> 2 (no changes; in fact most of flagship... xiaomi oppo vivo honor in china only uses 2-4)\n\nDAC support (USB C wired earbuds) - it remains; however most of the flagship in china had cut the support, example would be this years flagships Oppo X9, Vivo X300, Xiaomi 17 full series, Redmi K90 full series aka Pocophone, iQOO15, Realme GT8 full series no longer support DAC, only exception is X9 Pro, X300 Pro, Oneplus15 and Honor Magic 8 Pro still keep legacy DAC support.",
+      "engagement": 129,
+      "sentiment_polarity": 0.2021043771043771
+    },
+    {
+      "text": "OnePlus 15 Specifications more info exclusively at r/theoneplus15 \n\n\u2726 Display:\n6.78-inch LIPO Ultra-Narrow 2.5D Display /\nBOE X3 / 1.5K / Dolby Vision\n1-165Hz 8T LTPO Dynamic Refresh Rate\n2160Hz PWM Dimming at Low Brightness\n3Pulse + 1Pulse DC-Like Dimming\n1Pulse DC-Like Dimming at Full Brightness\n1800nit Global Peak Brightness\n1000nit Manual Peak Brightness\nHDR Vivid / HDR10+\nPro XDR Ultra Dynamic Display\n\n\u2726 Charging and Battery:\n7300mAh Third-Generation Glacier Battery (\u226580% after 1600 charges)\n120W Wired Charging / 50W Wireless Charging\n\n\u2726 Camera System:\n\nUltra-Wide Angle Lens (0.6X)\n15mm / JN5 / F2.0\n\nWide Angle Lens (1X)\n23mm / LYT-808 / F1.6 / OIS\n\nTelephoto lens (3.5x)\n80mm / JN5 / F2.8 / OIS\n\n\u2726 Performance:\nQualcomm Snapdragon 8 Elite Gen5\nFengchi Gaming Core 2.0\nLPDDR5X RAM\nUFS4.1 Storage\n\n\u2726 Other:\nSingle-point ultrasonic under-screen fingerprint recognition\nNext-generation wet touch algorithm\nLarge-volume bionic vibration motor\nMulti-function infrared remote control\nNext-generation cooling system\nIP66 / IP68 / IP69 dust and water resistance certifications\nFull-range multi-function NFC\nNext-generation ultra-linear dual speakers\nUSB 3.2 Gen1 (5Gbps)\n\n\u2726 Colors:\nPurple / Titanium / Black\n\n\u2726 Storage variants:\n12GB + 256GB / 12GB + 512GB\n16GB + 256GB / 16GB + 512GB / 16GB + 1TB",
+      "engagement": 76,
+      "sentiment_polarity": 0.03194444444444445
+    },
+    {
+      "text": "",
+      "engagement": 55,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "So I started looking into this year\u2019s flagship chipsets because I kept seeing people complain about their phones getting hot or draining way too fast. Naturally (me being me), I got curious about what\u2019s actually causing all that. Turns out, the chipset inside plays a much bigger role than most of us even realise.\n\nSo I ended up reading a lot about the two main contenders this year....the **Snapdragon 8 Elite Gen 5 and the Mediatek Dimensity 9500**. Phones like the oneplus15 with the snapdragon looks quite impressive on paper..... with big benchmark numbers, fast peak performance, all the shiny stuff you see in ads. \n\nBut here\u2019s the real take (based on several reviews online). When you push it with heavy gaming, even for like 30 minutes, it heats up, and performance kinda dips, which isn't what many users expected. The camera and AI performance too didn't do justice considering the hype it created, and not to forget.... the price. \n\nThen there\u2019s dimensity 9500, found in phones like the vivo x300 or find x9. It scores around 4 million on antutu, but what really matters is how it performs in everyday life. \n\nUsers say it stays cooler, lasts longer on battery, and keeps performance steady. Even heavy games and AI features run way more efficiently without heating up much.  \n\nI mean both chipsets have their own pros and cons but real life stability is what actually matters right?\n\nAnd after reading all this, I\u2019m lowkey leaning toward dimensity 9500 devices. They just feel more reliable for everyday use.... less heat, better battery life, and smooth performance instead of random slowdowns.\n\nYes, benchmarks do matter, but not if they cost you all these major slowdowns. So, which one are you gonna choose? ",
+      "engagement": 40,
+      "sentiment_polarity": 0.13795093795093794
+    }
+  ]
+}

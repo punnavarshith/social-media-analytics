@@ -1,0 +1,54 @@
+# Google Sheets API
+gspread==6.2.1
+google-auth==2.41.1
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+
+# Twitter API
+tweepy==4.16.0
+
+# Reddit API
+praw==7.8.1
+
+# Google Trends API
+pytrends==4.9.2
+
+# HTTP Requests (for Slack webhooks)
+requests==2.32.3
+
+# Environment variables
+python-dotenv==1.2.1
+
+# Data handling
+pandas==2.2.3
+
+# Date/time handling
+python-dateutil==2.9.0
+
+# Sentiment Analysis & NLP (for data_analysis.py)
+textblob==0.18.0
+nltk==3.9.1
+
+# Machine Learning (for engagement prediction - Milestone 4)
+scikit-learn==1.5.2
+
+# LLM Integration
+# Google Gemini API (Free Tier: 15 requests/minute)
+google-generativeai>=0.8.3
+
+# Ollama (Local - optional fallback)
+# Ollama handles the LLM, we just need requests for API calls
+# No openai package needed!
+
+# Data Visualization (for future reports & dashboards)
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Web Dashboard (Streamlit deployment)
+streamlit==1.29.0
+plotly==5.18.0
+
+# Database (Production deployment - Supabase)
+supabase>=2.25.0
+postgrest>=2.25.0
+websockets>=15.0.0

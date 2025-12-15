@@ -1,0 +1,115 @@
+{
+  "topic": "tesla model Y car",
+  "total_posts": 359,
+  "date_computed": "2025-12-14T01:24:52.655484",
+  "engagement": {
+    "average": 323.2451253481894,
+    "median": 74.0,
+    "max": 7143.0,
+    "min": 1.0,
+    "std": 706.7865758261618,
+    "top_25_percent": 321.5,
+    "top_10_percent": 776.5999999999999
+  },
+  "sentiment": {
+    "average_polarity": 0.13590753786686155,
+    "positive_posts": 226,
+    "negative_posts": 6,
+    "neutral_posts": 127
+  },
+  "timing": {
+    "best_hours": {
+      "21": 1178.7,
+      "22": 604.5454545454545,
+      "9": 489.25,
+      "1": 488.5833333333333,
+      "15": 425.1111111111111
+    },
+    "best_days": {
+      "Thursday": 451.98039215686276,
+      "Sunday": 436.5,
+      "Wednesday": 353.3695652173913
+    },
+    "worst_hours": {
+      "7": 60.25,
+      "8": 75.75,
+      "14": 89.0
+    }
+  },
+  "content": {
+    "avg_length": 2000.3370473537605,
+    "avg_words": 346.8440111420613,
+    "hashtag_usage": 6.685236768802229,
+    "url_usage": 17.548746518105848,
+    "emoji_usage": 8.913649025069638
+  },
+  "impact": {
+    "hashtag_boost": {
+      "with": 189.45833333333334,
+      "without": 332.8298507462687,
+      "improvement_pct": -43.07652005716097
+    },
+    "url_impact": {
+      "with": 370.6984126984127,
+      "without": 313.14527027027026,
+      "improvement_pct": 18.379055311443576
+    },
+    "emoji_impact": {
+      "with": 343.59375,
+      "without": 321.2538226299694,
+      "improvement_pct": 6.953980247501189
+    }
+  },
+  "top_posts": [
+    {
+      "text": "Was fortunate enough to recently complete a buyback with Tesla for our X Plaid. I had originally wanted a Rivian but we had a lease on a Y coming up and access to the shop wasn't fully open yet so timing didn't work. Tesla had also just slashed the price on the MXP so I got suckered in by Elon. Needless to say, the car was a mess and exactly 1 year later Tesla was cutting me a refund check. \n\nTook delivery of a Dual Large Performance a couple weeks ago and have absolutely been loving the experience. I guess for anybody who's in an X and is looking to ditch their Swastikar, here are some of my observations after 800 miles:\n\n1. Space: Space in the X is abysmal. The egg shape and the fact that we couldn't fold the second row flat in the Plaid really limited what we could carry. Plus no storage on those stupid Falcon Wing Doors. The powered frunk on the Rivian is an absolute game changer. I rarely used the frunk on my X because it was manual close and I don't like touching my car's paint if I don't absolutely need to. The open storage between the driver and passenger is also incredibly useful. My partner and I have two dogs so it's a great place to throw leashes, water bottles, bags. You can't imagine how much easier life is when you can just throw things in your car and go. Not having the glovebox is wild to me but it's a small thing.\n\n2. No more silly doors: the Falcon Wing Doors are the dumbest thing and I am so happy I don't have to deal with them anymore. I can't tell you how many times I've had to grab the door to prevent it from slamming into a concrete pillar or how many times I've had to take it into the service center to have the sensors fixed and ultimately replaced. They're a PITA to live with and I felt like a complete douche each time I opened them in public. Yes, ingress and egress are amazing with the FWD, but they're unnecessarily complicated and bound to break. \n\n3. Interior: this is the interior of a 6 figure vehicle (sans the squeaks). I've grown tired of Tesla's minimal interior. Again, I feel like it's a hat trick. It was cool in the beginning because it was new but now it's just lazy and boring. I love having textures and materials with pops of accent color. It's a well thought out space and a great place to spend time. Got the Ocean Coast interior and can't get enough of the blue/grey tint to the material. It adds a bit of warmth/depth. The Tesla white looks sterile. I do not miss the huge windshield with those ridiculous sunshades - how much time is anybody spending staring at the sky when driving anyway? \n\n4. Ride: ride is great. I prefer being higher up and being able to see the end of the hood. Read stories of the Gen 1 suspension so whatever they did to the suspension in Gen 2 worked. I've had the Model Y and an M2 so I'm familiar with stiff suspension - this is pretty plush to me. Even in sport I don't feel like it's excessively stiff. The X rides more like a car so getting in and out of the Rivian took some getting used to. Installing running boards over the long weekend. \n\n5. Performance: was on the fence about a tri or dual and ended up with the dual performance. Tesla acceleration is intense. No qualms about that. There were times when I'd floor it in the Plaid and literally feel the blood rushing to the back of my head. It was pretty cool, I'm not gonna like. But it didn't serve a purpose other than being faster or potentially getting me into trouble. The performance in the dual performance is more than enough and I don't plan on doing anything more than light off-roading. In the end, I don't feel the need to be boy racer in my Rivian. I'm perfectly happy casually cursing in my luxury daddy-mobile. \n\n6. Regenerative breaking: I love having the regenerative on high and the confidence that this car will stop in a short distance. The regenerative on the X was never enough and I found myself needing to activate the brake more often. Plus Tesla no longer allows drivers to select their preferred regenerative levels.  \n\n7. Tech: Tesla tech is just more mature. There's no getting around it. Coming into a Gen 2 it's nice to see the direction Rivian is going. I miss the snappiness of the Tesla system, better routing, and superior sound system. The premium audio in the Rivian is not premium right now. That being said, I like Rivian's approach to design. It's more thoughtful and inviting. I'm also exited that Rivian is in a time of rapid change. There's a lot to look forward to and I'm also excited to be part of a community that's filled with anticipation for things to come. Whatever small features I miss from my Tesla, like auto tilting mirrors, is already in Rivian's roadmap so it's only a matter of time for things to equal out. They just REALLY need to do something about this sound system. \n\n8. Elon: don't need to say much here. Just happy to be a Tesla-free household. \n\nOverall my partner and I are incredibly happy. This is a fantastic car that has its small quirks but is far exceeding our expectations. ",
+      "engagement": 7143,
+      "sentiment_polarity": 0.15666089466089467
+    },
+    {
+      "text": "",
+      "engagement": 5072,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "(Reuters) - Tesla ([TSLA](https://finance.yahoo.com/quote/TSLA)) EV sales in Europe have fallen in February behind legacy brand Volkswagen ([VOW3.DE](https://finance.yahoo.com/quote/VOW3.DE),\u00a0[VLKPF](https://finance.yahoo.com/quote/VLKPF)) and the BMW ([BMW.DE](https://finance.yahoo.com/quote/BMW.DE)) group, as well as rivals from China, data by research platform JATO Dynamics showed on Monday.\n\nElon Musk's all-electric brand is facing a loyalty test in Europe after the close ally of U.S. President Donald Trump openly supported far-right parties in the continent, including with at least two dozen posts on his X platform promoting Germany's Alternative fur Deutschland.\n\nMusk's role in politics, rising competition in the EV market and the phasing out of the existing version of its best-selling vehicle, the Model Y, have all impacted sales, Felipe Munoz, Global Analyst at JATO Dynamics, said in a report.\n\n\"Brands like Tesla, which have a relatively limited model lineup, are particularly vulnerable to registration declines when undertaking a model changeover,\" Munoz said.\n\nTesla's battery-electric vehicle (BEV) registrations in 25 European Union markets, the UK, Norway and Switzerland fell on average by 44% from the same month of 2024, to under 16,000 cars sold in February. Its market share in the month fell to 9.6%, the lowest February reading in the last five years.\n\nBy comparison, Volkswagen's BEV sales were up 180% to under 20,000 cars, while the BMW brand and BMW-owned Mini, combined, sold almost 19,000 BEVs in February, the data showed.\n\nChinese-owned brands, combined, also sold more electric cars than Tesla, JATO Dynamics said.\n\nBYD's ([1211.HK](https://finance.yahoo.com/quote/1211.HK),\u00a0[BYDDY](https://finance.yahoo.com/quote/BYDDY)) and Polestar's ([PSNY](https://finance.yahoo.com/quote/PSNY)) BEV sales in the same markets were up respectively 94% and 84% to over 4,000 and over 2,000 cars. Xpeng ([XPEV](https://finance.yahoo.com/quote/XPEV),\u00a0[9868.HK](https://finance.yahoo.com/quote/9868.HK)) sold over 1,000 cars and Leapmotor ([9863.HK](https://finance.yahoo.com/quote/9863.HK)) almost 900.\n\nBEV sales at Geely ([0175.HK](https://finance.yahoo.com/quote/0175.HK),\u00a0[GELYF](https://finance.yahoo.com/quote/GELYF)) -owned Volvo and SAIC ([600104.SS](https://finance.yahoo.com/quote/600104.SS))-owned MG, instead, dropped by 30% and 67% respectively, the data showed.\n\nTotal car sales in 25 European Union markets, the UK, Norway and Switzerland dropped by 3% to 0.97 million in February, while BEV registrations were up by 25%.",
+      "engagement": 4505,
+      "sentiment_polarity": -0.057589285714285704
+    },
+    {
+      "text": "",
+      "engagement": 3966,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "",
+      "engagement": 3365,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Hey everyone! (Please remove ADMIN if not allowed, hoping this helps folks)\n\nAs a former Tesla employee (these are expressly my views), I thought I\u2019d share some insights and tips that might help you get the most out of your Model Y. These are based on things I learned while working at Tesla and from my own experiences as an owner. (I have owned two M3 and two MY). One of the best cars I have ever owned.\n\n(All pictures will be of a 2022 Model Y Long Range)\n\n1. **Register Your Tires**: Many people don\u2019t know this, but you can (and should) register your tires with their respective manufacturers. If your tires don\u2019t reach their expected mileage, you might be eligible for warranty claims. I\u2019ve personally seen 10-25% of the cost covered through these claims. It\u2019s an easy process and can save you some cash down the line. You can do so usually online through the company website (I have done both Goodyear and Michelin with my MXM4 and my Eagle FS-1). If you see the picture of my tires this is after 33K miles and they are still at tread depth of 4-5mm for all. ***\\*FOR CLARITY IT DOES NOT WORK in all cases, HOWEVER I have had luck with Michelin and Goodyear from experience\\****\n2. **Take Advantage of Form 8911**: If you installed a home EV charger, you may qualify for a federal tax credit using IRS Form 8911. This credit can offset a significant chunk of the cost, so definitely check it out if you haven\u2019t already! the credit for each item of property is generally the smaller of 30% of the property's cost or $1,000. Check with a tax pro, worth the ask!\n3. **Protect Your Air Intake**: One of the most common out-of-warranty repairs I saw involved debris getting into the air intake. This can cause costly damage, but it\u2019s preventable! You can install grill covers or mesh to protect your air intake and keep out debris. It\u2019s a small investment that could save you a lot of money. ($2500-3500 for the repair and it is NOT warranty covered if due to DAMAGE by debris) ***EDIT: FOR CLARITY it is on the front fascia below the frunk, the GRILLE as you would call it on a traditional car, as long with the intake under the frunk itself I clean consistently. :)***\n4. **Maximizing Your Range**: If you\u2019re not hitting the range you\u2019d like, here are two easy ways to improve it:\n   * **Proper Tire Inflation**: Keep your tires inflated to the recommended PSI. Underinflated tires can reduce range significantly. (42-44 PSI is usually where they sit). See the photos I have included my tires are showing visible \\*wear\\* they considered this (Goodyear) as cosmetic but still offered me 20% off my next set via warranty at 33,000 miles.\n   * **Precondition While Charging**: If you precondition your car while it\u2019s still plugged in, you\u2019ll use less battery power to warm things up, which helps extend range. I\u2019ve been able to consistently get 270-280 miles this way going 75-77 MPH on highway with air / heat between 1-3 setting. (This is at temperatures in the high desert of 40 - 75 degrees).\n\nLastly I provided my current KWH usage over the lifetime of my car. For context I live in PHX so it is 100-120 about 4 months out of the year, then I also life part time in Flagstaff which can be 10-40 degrees. So my car has been in both extremes and still manage to do pretty well. :)\n\nAdditionally last thing for context. I charge at home for about 95% of my charging which on average is $0.16 per KWH. If you intend to supercharge to save money... you will not save money over gas assuming like 30 MPG and gas below about $3.00 (on average) a gallon. COMMON MISCONCEPTION.\n\nCharging for lifetime of car:\n\n\\~$1500 at Home at \\~0.16 per KWH\n\n\\~$3200.... if it was ALL supercharging at \\~$.33-.35 (on average) can be up to $.45.\n\nA $1700 difference just by using home charging which paid for my install (not including tax credit).\n\nI hope these tips are helpful! If anyone has questions or their own advice to share, let\u2019s hear it. This Model Y community is awesome, and I\u2019m always happy to contribute. \ud83d\ude98\u2728",
+      "engagement": 2889,
+      "sentiment_polarity": 0.1733668315811173
+    },
+    {
+      "text": "",
+      "engagement": 2647,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Tesla\u2019s\u00a0postelection pop has almost disappeared.\n\nShares of the electric vehicle maker plunged more than 8% on Tuesday, pushing the company\u2019s market cap below $1 trillion and to its lowest since Nov. 7, which was two days after\u00a0President Donald Trump\u2019s\u00a0election victory.\n\nThe stock has plummeted 25% to start the year, while the Nasdaq is down just 1.5%, and has slid more than 35% from its record close on Dec. 16. CEO\u00a0Elon Musk\u00a0has lost more than $100 billion in net worth over that stretch, though he is still the world\u2019s richest person, with a fortune valued at about $380 billion.\n\nThe latest slide followed a report from\u00a0Reuters\u00a0on Monday that Tesla\u2019s long-awaited upgrade to its partially automated driving systems left owners disappointed. Many users told the publication that Tesla\u2019s \u201cnavigate on city streets\u201d feature in China fell short of Musk\u2019s promises for self-driving technology.\n\nOther EV makers in China, including\u00a0BYD, offer their partially automated driving systems for free or a much lower cost. Xiaomi\u2019s popular model SU7 includes the company\u2019s equivalent technology as a standard option for free.\n\nThe report out of China added to anxiety among Tesla shareholders. Some of the concern has to do with the company\u2019s performance and some is specific to Musk, who is spending much of his time in Washington, D.C., leading President Trump\u2019s so-called Department of Government Efficiency, or DOGE.\n\nMusk, along with his team in Washington, has gained unparalleled access to government computer systems and taxpayer data, and the president has enabled the billionaire to lead mass firings of workers in agencies tasked with oversight of his companies, including Tesla.\n\nMusk\u2019s extremist political rhetoric and activism has led opponents in various markets to organize\u00a0protests, including at Tesla stores and service centers. Tesla\u2019s stock dropped\u00a0earlier this month\u00a0on Trump\u2019s announced plans for extensive tariffs on goods from Canada, Mexico and China, which came alongside a decline in Tesla vehicle registrations across Europe in January and February.\n\nFor the fourth quarter, Tesla\u00a0reported\u00a0earnings and sales that missed analysts\u2019 estimates, with automotive revenue dropping 8% from a year earlier and operating income plummeting 23%. In the late January report, the company cited reduced average selling prices across its aging lineup of Model 3, Model Y, Model S and Model X vehicles as a major reason for the decline.\n\nAccording to the California New Car Dealers Association, Tesla sales dropped 11.6% in the fourth quarter of 2024 in the state, which had been Tesla\u2019s biggest market domestically.\n\nTesla shares are now about 20% above where they were trading prior to Trump\u2019s victory. Most of what remains of the rally is due to the stock\u2019s\u00a015% jump\u00a0the day after the election. Musk\u00a0was a major backer of Trump\u2019s presidential effort, contributing $290 million to Republican candidates and causes in 2024, with most of that directed at returning Trump to the White House.\n\nSource: [https://www.cnbc.com/2025/02/25/teslas-market-cap-sinks-below-1-trillion-as-stock-falls-more-than-9percent.html](https://www.cnbc.com/2025/02/25/teslas-market-cap-sinks-below-1-trillion-as-stock-falls-more-than-9percent.html)",
+      "engagement": 2410,
+      "sentiment_polarity": 0.08264520202020202
+    },
+    {
+      "text": "This is the 3rd incident this week and they\u2019re ramping up. I had to call the cops on a dually truck who ran me off the side of the highway, I had an instance where an SUV didn\u2019t let me safely merge this morning while being flicked off, another car just ignored my turn signal, sped up and pushed into my lane, people have aggressively passing normal for Columbus however, this has been like bumper to bumper close. I\u2019m tired boss.\n\nI don\u2019t mind the constant birds. Fuck Tesla. We are traveling at 70+ MPH - please, do not toy with someone\u2019s life. It\u2019s become such a liability for me to even drive because it\u2019s anxiety inducing. I still have a car payment on this thing. I have tried to sell this stupid vehicle, no one\u2019s actually interested because I\u2019ve been spammed by people trying to waste my time for being a Tesla car owner. (Yes, this a real thing that is happening) I think the reason my car in particular garnishes more attention is possibly my license plate? I think it\u2019s an excellent opportunity for marketing if a local dealership wants to help me out.\n\nI am a Creative Consultant and want nothing to do with this brand. What dealership has a used 2024 Prius in Black who can help me? It looks bitchin\u2019, it serves my eco-friendly goals and it would be embarrassing for Tesla. I build pitch decks for a living. Cash + trade or 1:1 - whatever deal I can find. I think there\u2019s a serious opportunity to cause some upset. And start a powder-keg for losing one of the most recognizable names - to a Prius. Hell yes. \n\n\nEDIT: Wow! This blew up! Y\u2019all are so nice here too! So, based on feedback - may have to be very selective with what dealership I go for. CV offered a decent amount. I still think this post has demonstrably proven, this could be a sick marketing stunt, if we find a dealer. Especially with my plate. I don\u2019t want to spoil what it is. Going to simply show up to a few doors and bring my creative brain and negotiate! I\u2019m headed to a few this week to see what branches I can shake up! Thanks everyone :) Manifesting some cool shit happening!",
+      "engagement": 2159,
+      "sentiment_polarity": 0.09584160052910054
+    },
+    {
+      "text": "",
+      "engagement": 1994,
+      "sentiment_polarity": 0.0
+    }
+  ]
+}

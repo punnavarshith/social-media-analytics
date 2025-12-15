@@ -1,0 +1,115 @@
+{
+  "topic": "samsung s25 ultra",
+  "total_posts": 382,
+  "date_computed": "2025-12-14T23:32:10.446686",
+  "engagement": {
+    "average": 242.04712041884818,
+    "median": 78.5,
+    "max": 2529.0,
+    "min": 1.0,
+    "std": 427.15915377728743,
+    "top_25_percent": 222.0,
+    "top_10_percent": 699.8000000000004
+  },
+  "sentiment": {
+    "average_polarity": 0.1334346413463162,
+    "positive_posts": 232,
+    "negative_posts": 15,
+    "neutral_posts": 135
+  },
+  "timing": {
+    "best_hours": {
+      "18": 404.7647058823529,
+      "4": 333.3333333333333,
+      "2": 332.1818181818182,
+      "19": 330.07142857142856,
+      "9": 330.0
+    },
+    "best_days": {
+      "Saturday": 300.07547169811323,
+      "Wednesday": 288.1194029850746,
+      "Friday": 254.20754716981133
+    },
+    "worst_hours": {
+      "13": 102.125,
+      "0": 106.92307692307692,
+      "20": 118.05882352941177
+    }
+  },
+  "content": {
+    "avg_length": 1357.7748691099475,
+    "avg_words": 224.1413612565445,
+    "hashtag_usage": 2.8795811518324608,
+    "url_usage": 10.471204188481675,
+    "emoji_usage": 8.115183246073299
+  },
+  "impact": {
+    "hashtag_boost": {
+      "with": 401.09090909090907,
+      "without": 237.33153638814017,
+      "improvement_pct": 69.00025811780496
+    },
+    "url_impact": {
+      "with": 255.725,
+      "without": 240.44736842105263,
+      "improvement_pct": 6.353836051220312
+    },
+    "emoji_impact": {
+      "with": 163.96774193548387,
+      "without": 248.94301994301995,
+      "improvement_pct": -34.13442884519755
+    }
+  },
+  "top_posts": [
+    {
+      "text": "Well, the Unpacked event is done, and unfortunately, Samsung did drop Bluetooth support from the S Pen, which means there won't be any Air Gestures on the S25 (and possibly future Ultras too?). I use my S Pen to click group pictures (and people are really impressed with the S Pen clicking the pics), and it\u2019s very convenient. The other gestures were cool too. If Samsung keeps going down this path of cutting useful features to save a few bucks, I\u2019ll eventually have to find a better Android phone. This is a very bad decision by Samsung and makes the S Pen a dumb stylus.",
+      "engagement": 2529,
+      "sentiment_polarity": -0.03965811965811965
+    },
+    {
+      "text": "",
+      "engagement": 2400,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "I been buying Samsung phones since the Galaxy S1 in 2011 so I'm an old fan. Throughout the years they made some great upgrades but now it's just alright Samsung what's going on. Every year we get a little upgrades that's why some people keeping their phones for 3 years now, I'm using a S25 Ultra now and to be honest it's my favorite phone for 2025, I still don't see any upgrades from S24 Ultra or S23 Ultra or S22 Ultra but it's still a great phone. For $1,300 this phone is very expensive and doesn't offer much compared to the last 3 Ultra phones. What's your thoughts about Samsung in the last 5 years?",
+      "engagement": 2388,
+      "sentiment_polarity": 0.21625
+    },
+    {
+      "text": "**Samsung's Software Updates: A Silent Killer for Performance?**\n\nSamsung has long been known for its premium hardware, but what if I told you their software updates are intentionally designed to slow down your device? Over the years, many users like me have suspected that major software updates gradually reduce battery life, camera performance, and overall speed\u2014pushing users to upgrade to the latest model. To test this theory, I made a hypothesis in [***my previous post*** ](https://www.reddit.com/r/S24Ultra/comments/1iyp750/youre_forced_to_upgrade_arent_you/)and many of you wanted a detailed testing procedure. So, I conducted an experiment using three Galaxy S24 Ultra devices.\n\n**The Experiment: Same Device, Different Software Updates**\n\nI tested three Galaxy S24 Ultra units:\n\n* **Device 1:** Brand new, production date May 2024 (on May 24 patch).\n* **Device 2:** Brand new, production date May 2024 (on January 25 patch).\n* **Device 3:** My personal unit, production date March 2024 (on January 25 patch).\n\n**Testing Conditions: Real-World Use, Not Just Benchmarks**\n\nTo ensure fairness, I tested all three devices under identical conditions:\n\n* **Same cellular network** (same SIM provider and signal conditions).\n* **Cellular calls** for 1.5 hours each.\n* **Daily apps**: Instagram, YouTube video streaming, Netflix, Facebook, Reddit, and WhatsApp.\n* **Camera usage**: Photos and videos in various lighting conditions, including night mode and HDR.\n* **Gaming**: Subway Surfers and PUBG Mobile.\n* **AnTuTu Graphics Stress Test** to push GPU performance.\n* **Kept in room temperature** 27\u2103.\n* **Same settings**:\n   * **Adaptive battery:** Turned off.\n   * **No background activity**.\n   * **No bloatware**.\n   * **Same apps & versions, same sales region for all the three phones**.\n   * **Performance profile:** Standard mode.\n   * **Brightness level:** 70%.\n   * **Always-on display:** Turned on.\n\n# The Results: A Clear Performance Decline\n\n**Battery Performance Drops After Update**\n\nI flashed the **March 2024 security update** (S928BXXS1AXBN) onto devices 2 & 3 (which were on the January 25 patch before) to match them all on a similar state. Device 1 remained in the May 24 (S928BXXS2AXD5) patch as I couldn't flash the **March patch** on it, don\u2019t know why!\n\nThen, I monitored the **Screen-On Time (SoT):**\n\n* **Brand-new devices:** More than **7 hours 30 minutes** of SoT.\n* **My personal device:** Over **7 hours** of SoT. (Understandable, as the battery had degraded slightly.)\n\nAfter updating to the **January 2025 patch** (S928BXXS4AYA1) to all three devices:\n\n* SoT dropped to **6 hours 15-40 minutes**\u2014a noticeable decline.\n\nEven on standby mode, the battery drained faster than expected, making it difficult to last a full day. This decline suggests the update may have introduced new background processes or inefficiencies that weren't present in the older firmware, or its planned obsolescence??\n\n**Camera Performance Has Degraded**\n\nPhotos take longer to process, especially in night mode.\u00a0Longer processing time for HDR shots, making quick captures frustrating.\u00a0Increased noise and softer details, even in well-lit environments. Colors appear duller than before, losing their vibrancy and contrast. The brand-new camera experience is gone already.\n\n**Device Responsiveness Becomes Sluggish**\n\nAnimations and scrolling feel slower, making the device less fluid.\u00a0Apps take longer to open, especially heavier applications.\u00a0Multi-tasking has noticeable lag, even when switching between just two apps.\u00a0Read/write speeds dropped by 8-10%, affecting app performance.\n\n**Gaming Performance Shows Micro-Stutters**\n\nPUBG Mobile shows frequent frame drops, making gameplay less smooth.\u00a0Device heats up to 43\u2103 after extended play, whereas before, it remained cooler.\u00a0Frame rate consistency dropped by 7% over long gaming sessions, affecting responsiveness.\u00a0Longer loading times for high-performance apps, including games and video editors.\n\n# Interesting Fact: No Way Back!\n\nSamsung is way too smart\u2014once you update your phone, no matter how many times you go back and flash an older firmware, the performance and feel remain the same as the latest update. This suggests deep-level firmware optimizations that persist even after downgrading. I could identify this fact by comparing the two new devices side by side.\n\n**Samsung\u2019s Updates: Secretly Slowing Down Your Phone?**\n\nThis performance downgrade isn't an accident\u2014it seems intentional. Samsung wants the **Galaxy S25 Ultra** to feel like a gigantic upgrade over its predecessor. However, when the **S24 Ultra first launched, it was a beast.** It ran smoothly, had exceptional battery life, and delivered top-tier performance. Now, post-update, it\u2019s just another ordinary smartphone. If you hold an **S25 Ultra today**, you will feel the same punch you did when you bought the **S24 Ultra** last year. But the **updated S24 Ultra** is way behind the comparison So, what really changed in just **11 months**?\n\n**Samsung\u2019s Hidden Strategy: Why Do They Do This?**\n\nThe most logical explanation is **planned obsolescence**. While Apple has been caught doing this in the past, Samsung appears to be implementing similar tactics, but more subtly. Their seven-year software update promise sounds great, but if devices start underperforming within a year, how usable will they be by year three? Some might call this a conspiracy theory, but it raises an important question: **Should we trust manufacturers blindly when it comes to software updates?** Instead of silently nerfing performance, Samsung should be more transparent about how updates impact older devices.\n\nSo, if your phone runs smoothly, ask yourself\u2014do you really need that next security patch right now? While security updates are essential, they shouldn't come at the cost of usability. Before you hit \u201cupdate,\u201d think twice!\n\n**Disclaimer: The Challenge of Providing Hard Evidence**\n\nWhile my test results strongly suggest a performance decline, I must clarify that I cannot provide absolute proof or raw data logs. Due to technical constraints, including Samsung's encrypted bootloader and firmware restrictions, independent performance tracking is difficult. Additionally, Samsung does not allow full downgrades to previous firmware versions, making long-term comparative analysis nearly impossible. However, many users\u2014including myself\u2014have reported similar experiences, further supporting the idea that Samsung's updates may intentionally degrade performance.\n\nhttps://preview.redd.it/i9q97vpj44me1.png?width=552&format=png&auto=webp&s=bb2696f4ff47a12d22d4995414e6fa1ba2a47a01\n\n",
+      "engagement": 2369,
+      "sentiment_polarity": 0.06988338541368845
+    },
+    {
+      "text": "",
+      "engagement": 2363,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Upgraded from a S22Ultra. Was waiting for the past 6 months for the S25U, but wasn\u2019t very impressed with what it had to offer. Plus the Spen downgrade was something I couldn\u2019t ignore.\n\nGot this beauty for half the price of a S25U, from Oman.",
+      "engagement": 2272,
+      "sentiment_polarity": 0.19444444444444445
+    },
+    {
+      "text": "and I think that s26 ultra will still have a 5000mah battery, samsung you really got to step up your game, even apple is coming up to you.",
+      "engagement": 2216,
+      "sentiment_polarity": -0.1
+    },
+    {
+      "text": "This looks shocking . These are 5 years apart smartphones ",
+      "engagement": 2186,
+      "sentiment_polarity": -1.0
+    },
+    {
+      "text": "Just got my new S25 Ultra..I can compare it with the S24 Ultra in case yo wanna now anything just let me know",
+      "engagement": 1924,
+      "sentiment_polarity": 0.13636363636363635
+    },
+    {
+      "text": "I bought this over Vivo X200 pro under influence od people praising how good is Samsungs software optimisation/screen and brand value, I wanted only two things in a phone (coming from iphone 11)  an amazing camera and a great battery, this glorified piece of metal and glass costed me over 1.2 lakh and giving me average battery life and unsatisfactory camera performance, This miss calculation costed me a hole in a pocket which I have to live with now. \nIts my personal rant I know its a great phone but not for me!\nGuy never buy something under influence of what people say and buy what you want.",
+      "engagement": 1788,
+      "sentiment_polarity": 0.38579545454545455
+    }
+  ]
+}

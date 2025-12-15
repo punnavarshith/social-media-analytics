@@ -1,0 +1,115 @@
+{
+  "topic": "oneplus13",
+  "total_posts": 139,
+  "date_computed": "2025-12-14T23:53:37.031178",
+  "engagement": {
+    "average": 39.28776978417266,
+    "median": 12.0,
+    "max": 793.0,
+    "min": 1.0,
+    "std": 95.13935199807324,
+    "top_25_percent": 33.0,
+    "top_10_percent": 74.40000000000002
+  },
+  "sentiment": {
+    "average_polarity": 0.14885275415747834,
+    "positive_posts": 88,
+    "negative_posts": 2,
+    "neutral_posts": 49
+  },
+  "timing": {
+    "best_hours": {
+      "13": 104.83333333333333,
+      "1": 93.5,
+      "17": 81.08333333333333,
+      "20": 74.0,
+      "6": 73.625
+    },
+    "best_days": {
+      "Sunday": 83.08695652173913,
+      "Thursday": 47.11764705882353,
+      "Friday": 43.904761904761905
+    },
+    "worst_hours": {
+      "4": 5.75,
+      "22": 7.5,
+      "5": 9.5
+    }
+  },
+  "content": {
+    "avg_length": 700.431654676259,
+    "avg_words": 129.25179856115108,
+    "hashtag_usage": 3.597122302158273,
+    "url_usage": 7.194244604316546,
+    "emoji_usage": 5.0359712230215825
+  },
+  "impact": {
+    "hashtag_boost": {
+      "with": 17.0,
+      "without": 40.11940298507463,
+      "improvement_pct": -57.626488095238095
+    },
+    "url_impact": {
+      "with": 119.6,
+      "without": 33.06201550387597,
+      "improvement_pct": 261.7444314185228
+    },
+    "emoji_impact": {
+      "with": 28.428571428571427,
+      "without": 39.86363636363637,
+      "improvement_pct": -28.685453656947395
+    }
+  },
+  "top_posts": [
+    {
+      "text": "I know this is a Pixel subreddit but still. ",
+      "engagement": 793,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Hope to see your verdict on the comparison, not an professional.\n\nFull list of photos in [https://imgur.com/a/vv5i4Ax](https://imgur.com/a/vv5i4Ax); reddit only allow max of 20 photos.",
+      "engagement": 540,
+      "sentiment_polarity": 0.15
+    },
+    {
+      "text": "Snapdragon 8 Elite vs Rog Ally Z1 Extreme. \n8 Elite with no dedicated turnip driver. \n\nOriginal post - https://x.com/sukunaa420/status/1930266446463914258?s=19",
+      "engagement": 479,
+      "sentiment_polarity": 0.125
+    },
+    {
+      "text": "I've been a OnePlus user since 5t. Later upgraded to 9 pro and around March this year I was thinking of going for the S24u at a discounted price since my wife has one and I was fascinated by the Galaxy AI features but deep inside I just couldn't get myself to commit to Samsung, what with the green line issue and all. OnePlus just had that hold over me that I kept looking for ways to stop considering other alternatives! \n\nI was lurking on this sub and all I could see was complaints about battery drains and the camera not being up to the mark. After much internal debate and consideration I decided to go with my heart and got myself this OnePlus13  16 / 512  at approx. 53k INR (exchanged 9 pro+ Card offers). \n\nWhen I got the phone my wife kept pulling my leg saying I could've gone for a superior brand and the smartphone of the year 2024 in the S24U and that she'd always get better pictures because of the superior camera setup on her phone. \n\nCut to August 2025, she has to charge her phone twice a day with moderate usage,the AI features are rarely used and the cherry on top, she prefers the portraits and pictures taken on the OP13 camera! \n\nIt is, by far, one of the best purchases I've made in recent years and have absolutely no regrets in picking this over anything else! \n\n",
+      "engagement": 232,
+      "sentiment_polarity": 0.23320312499999998
+    },
+    {
+      "text": "Oneplus 15 just just such pitfall. Not gonna lie the iQOO 15 is amazing, but it should be a should be like a significant step down in everything but pure performance. Just compare the oneplus 15 against the iQOO 15. ITS ROLE REVERSAL!!! That's why I'm publically and formally declaring that the oneplus 13 is peak and any successive phone in the direction of the oneplus 15 is destructive for the brand because what's the appeal? Oxygen os? That's it? It's starting to become like the pixel at this point you don't buy it for anything but stock android and cameras\n\nSeriously. Want cameras? Buy oppo find series, want performance? Buy the iQOO at a lower price. What do you all think?\n\nThis situation is entirely fixable. It's simple, for the oneplus 16 use the iqoo 16 as a base and beat it out spec wise in each and every category! \n\nAlso why does the more expensive oneplus not have snapdragon sound but the cheaper iQOO does",
+      "engagement": 208,
+      "sentiment_polarity": 0.05197585978835979
+    },
+    {
+      "text": "And my battery still 100% I use it most days and charge it every day ",
+      "engagement": 169,
+      "sentiment_polarity": 0.5
+    },
+    {
+      "text": "",
+      "engagement": 159,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Had this phone for 2 months, tonight when I was having dinner, I looked up my phone, this purple thing comes up. I don\u2019t know what to say about oneplus. This is my main work phone. And some random purple line just decided to come. The phone is in perfect shape with case and screen protector. ",
+      "engagement": 142,
+      "sentiment_polarity": 0.2222222222222222
+    },
+    {
+      "text": "After almost 7 months of watching every reviews and comparisons and what not I bought this thing...lesssgooo!!",
+      "engagement": 140,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Bought OnePlus13 as my backup device and for software development. My primary device is Galaxy S24 Ultra + Galaxy Watch Ultra. Yesterday decided to test OP13 so I moved my watch to OP, installed Sim card. I also posted photo comparison between S24U and OP13, but in this post I want to tell my opinion and ask some questions, since this is my first OP phone.\n\nWhat I like about OP13.\n\nIt is lighter than S24U and feels better in hands. It is crazy fast, and UI is very smooth to the point that S24U can never achieve! Everything is battery smooth!\n\nI like AI features especially AI Rewrite that is available right from side bar to use with any application! Screen is great, I do have PWM sensitvity and was using OP without any strain on my eyes!\n\nBuild quality is a top notch! It is really a high-end device.\n\nCamera is acceptable, hope future firmware will fix oversaturation.\n\nChargin is crazy! I do not know how it can fast change on my 27W Anker, but it shows Supervooc and charges super-fast :) Tested with 45W Anker and 67W Anker, fast!\n\nNow that bad (it could be just for me :) ) Some stuff related to software, some to hardware and if you can help me with any of these, I highly appreciate it!\n\nI hate drawer with scrollable list of all apps. I came from One UI and I like to have my app list to be in a static mode. I love folders where I can store apps by type. OP13 implementation is not good for me because I cannot find anything and forced to use search. May not be a deal breaker for most people, but it is for me.\n\nUnable to sync DND/Sleep mode with Galaxy watch and Pixel Watch 2. With last one even alarms cannot be synched. But this is not OP fault at all, just wanted to mention this if anyone want to use non OP smartwatches. There are some custom-made apps to sync, but they are required some additional work with adb (not a problem for me but can be for others). This is actually very frustrating because Android vendors are trying to force you to use their eco system. Understandable from business perspective, but not from the user's one.\n\nAlert slider is such a great feature, only if it works :) Today since morning, I am getting notification sounds even with slider set to silent mode. Is there any fix for this?\n\nNotification badge numbers - feature simply does not work and after searching internet I found that OP still unable to fix it. Or am I missing something here?\n\nCannot sync calendar from Outlook to phone. Sync is enabled in Outlook app, but calendar (Google Calendar) doesn't see my account. Same setup works on my S24U. So, I do not know whose fault it is.\n\nAlways On Display - I love seamless transitions, but it lacks an option to show AOD on tap. I do not use AOD at home and on my S24U I set it to show on tap, so I can just tap and see what I want to see. OP3 on tap only shows finger reading circle (when AOD is off). Could be an option in a future, not a big deal. BTW, AOD on OP23 works as it should in terms of brightness, Samsung screwed AOD on S24U it is barely visible, that's why I do not use it.\n\nFinger print reader is very good, but fails more that the one on S24U. Even though both are ultrasound ",
+      "engagement": 120,
+      "sentiment_polarity": 0.11983965014577262
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "topic": "Mahindra Xuv300",
+  "total_posts": 113,
+  "date_computed": "2025-12-15T01:02:29.947135",
+  "engagement": {
+    "average": 493.353982300885,
+    "median": 21.0,
+    "max": 31248.0,
+    "min": 1.0,
+    "std": 2960.7766835758352,
+    "top_25_percent": 119.0,
+    "top_10_percent": 817.7999999999993
+  },
+  "sentiment": {
+    "average_polarity": 0.10534342717888759,
+    "positive_posts": 53,
+    "negative_posts": 6,
+    "neutral_posts": 54
+  },
+  "timing": {
+    "best_hours": {
+      "21": 31248.0,
+      "1": 1100.6666666666667,
+      "16": 539.5714285714286,
+      "11": 444.5,
+      "15": 359.3333333333333
+    },
+    "best_days": {
+      "Saturday": 1433.5416666666667,
+      "Monday": 393.8333333333333,
+      "Tuesday": 316.0833333333333
+    },
+    "worst_hours": {
+      "2": 11.5,
+      "12": 12.7,
+      "8": 23.333333333333332
+    }
+  },
+  "content": {
+    "avg_length": 683.9911504424779,
+    "avg_words": 117.04424778761062,
+    "hashtag_usage": 1.7699115044247788,
+    "url_usage": 7.964601769911504,
+    "emoji_usage": 7.079646017699115
+  },
+  "impact": {
+    "hashtag_boost": {
+      "with": 19.5,
+      "without": 501.8918918918919,
+      "improvement_pct": -96.11470113085622
+    },
+    "url_impact": {
+      "with": 226.33333333333334,
+      "without": 516.4615384615385,
+      "improvement_pct": -56.17614933968821
+    },
+    "emoji_impact": {
+      "with": 145.25,
+      "without": 519.8761904761905,
+      "improvement_pct": -72.06065546741898
+    }
+  },
+  "top_posts": [
+    {
+      "text": "I didn't understand what it was at first, but when it dawned on me, the sheer pretentiousness and elitism kinda pissed me off ngl.\n\nAnd I'm someone who meets a lot of this criteria, which is why the recruiter contacted me, but it still pisses me off.\n\n\"What we are looking for\" is referring to the end client internal memo to the recruiter, not the job candidate. The public job posting obviously doesn't look like this.\n\nJust wanted to post this to show yall how some recruiters are looking at things nowadays.",
+      "engagement": 31248,
+      "sentiment_polarity": 0.05
+    },
+    {
+      "text": "Per the halftime broadcast Murray has thrown 6 picks since 2024 while targeting Marrison Harrison Jr. Since the beginning of the 24 season he has thrown a total of 14 picks including 2 today on 2 MHJ targets.\n\nEdit: For context, Kirk Herbstreit just mentioned that's the 4th most interceptions between any QB/WR combo in that time frame.",
+      "engagement": 2943,
+      "sentiment_polarity": 0.25
+    },
+    {
+      "text": "It gets a BYD blade tech based 79kWh battery, a 282hp rear wheel drive motor. Gets the usual ADAS level 2+ features. Supports upto 175kW DC fast charging.\n\nI\u2019ve been getting the equivalent of around 500-520km (~310mi) from a full charge.\n\nIt\u2019s been a fun experience so far! This is my first ever EV. City drives are ridiculously easy now. One pedal drive is a godsend! I don\u2019t think i can ever go back to ICE vehicles now.",
+      "engagement": 2080,
+      "sentiment_polarity": 0.18958333333333333
+    },
+    {
+      "text": "",
+      "engagement": 1711,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "",
+      "engagement": 1619,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "What's ur opinion on this recent newspaper ad?\nAre these cars that good?",
+      "engagement": 1616,
+      "sentiment_polarity": 0.35
+    },
+    {
+      "text": "This used to be done by Tech companies but tata, mahindra and others have started too.... Johnny sins being himself e poses the Auto industry as a whole",
+      "engagement": 1600,
+      "sentiment_polarity": 0.2
+    },
+    {
+      "text": "",
+      "engagement": 1478,
+      "sentiment_polarity": 0.0
+    },
+    {
+      "text": "Link of the video - https://youtu.be/YvMPKiGYpUk \n\nPlease watch this video first and then share your opinion. ",
+      "engagement": 1422,
+      "sentiment_polarity": 0.25
+    },
+    {
+      "text": "",
+      "engagement": 1017,
+      "sentiment_polarity": 0.0
+    }
+  ]
+}
