@@ -244,8 +244,10 @@ class LLMTopicPipeline:
         if 'text' not in df.columns:
             if 'selftext' in df.columns:
                 df['text'] = df['selftext'].fillna('')
+            elif 'title' in df.columns:
+                df['text'] = df['title'].fillna('')
             else:
-                df['text'] = df.get('title', '').fillna('')
+                df['text'] = ''
         
         # Add sentiment analysis
         print("   🔍 Analyzing sentiment...")
