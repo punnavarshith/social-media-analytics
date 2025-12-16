@@ -686,29 +686,54 @@ Your complete rewrite (start directly with the new text, no preamble):"""
             traceback.print_exc()
             return None
     
-    def _validate_variant_length(self, original: str, variant: str, variant_name: str) -> bool:
-        """Validate that variant meets length requirements (70-130% of original)"""
+    def _validate_variant_length(self, original: str, variant: str, variant_name: str, platform: str = 'twitter') -> bool:
+        """
+        Validate variant length based on platform-specific rules
         
-        original_words = len(original.split())
-        variant_words = len(variant.split())
+        Platform rules:
+        - Twitter: Character count <= 280
+        - Reddit/LinkedIn: Word count 70-130% of original
+        """
         
-        # Relaxed constraints: 70-130% (was 80-120%)
-        min_words = int(original_words * 0.7)
-        max_words = int(original_words * 1.3)
+        # Twitter uses character-based validation
+        if platform.lower() == 'twitter':
+            char_count = len(variant)
+            is_valid = char_count <= 280
+            
+            if not is_valid:
+                print(f"⚠️ {variant_name} length validation failed:")
+                print(f"   Platform: Twitter (character limit)")
+                print(f"   Variant length: {char_count} characters")
+                print(f"   Maximum allowed: 280 characters")
+                print(f"   Exceeded by: {char_count - 280} characters")
+            else:
+                print(f"✅ {variant_name} length OK: {char_count} characters (Twitter)")
+            
+            return is_valid
         
-        is_valid = min_words <= variant_words <= max_words
-        
-        if not is_valid:
-            print(f"⚠️ {variant_name} length validation failed:")
-            print(f"   Original: {original_words} words")
-            print(f"   Variant: {variant_words} words")
-            print(f"   Required: {min_words}-{max_words} words (70-130% range)")
-            print(f"   Deviation: {((variant_words/original_words - 1) * 100):.1f}%")
+        # Reddit/LinkedIn use word-based validation
         else:
-            deviation = ((variant_words/original_words - 1) * 100)
-            print(f"✅ {variant_name} length OK: {variant_words} words ({deviation:+.1f}%)")
-        
-        return is_valid
+            original_words = len(original.split())
+            variant_words = len(variant.split())
+            
+            # Relaxed constraints: 70-130% (was 80-120%)
+            min_words = int(original_words * 0.7)
+            max_words = int(original_words * 1.3)
+            
+            is_valid = min_words <= variant_words <= max_words
+            
+            if not is_valid:
+                print(f"⚠️ {variant_name} length validation failed:")
+                print(f"   Platform: {platform} (word count validation)")
+                print(f"   Original: {original_words} words")
+                print(f"   Variant: {variant_words} words")
+                print(f"   Required: {min_words}-{max_words} words (70-130% range)")
+                print(f"   Deviation: {((variant_words/original_words - 1) * 100):.1f}%")
+            else:
+                deviation = ((variant_words/original_words - 1) * 100)
+                print(f"✅ {variant_name} length OK: {variant_words} words ({deviation:+.1f}%)")
+            
+            return is_valid
     
     def _validate_content_preservation(self, original: str, variant: str) -> dict:
         """Check if key content elements are preserved"""
@@ -774,7 +799,7 @@ Your complete rewrite (start directly with the new text, no preamble):"""
             hook_optimized = self.rewrite_with_llm(content, 'hook', topic)
             if hook_optimized:
                 # Validate length
-                if self._validate_variant_length(content, hook_optimized, 'Hook Enhanced'):
+                if self._validate_variant_length(content, hook_optimized, 'Hook Enhanced', platform):
                     # Validate content preservation
                     preservation = self._validate_content_preservation(content, hook_optimized)
                     if not preservation['urls_preserved']:
@@ -797,7 +822,7 @@ Your complete rewrite (start directly with the new text, no preamble):"""
             clarity_optimized = self.rewrite_with_llm(content, 'clarity', topic)
             if clarity_optimized:
                 # Validate length
-                if self._validate_variant_length(content, clarity_optimized, 'Clarity Enhanced'):
+                if self._validate_variant_length(content, clarity_optimized, 'Clarity Enhanced', platform):
                     # Validate content preservation
                     preservation = self._validate_content_preservation(content, clarity_optimized)
                     if not preservation['numbers_preserved']:
@@ -820,7 +845,7 @@ Your complete rewrite (start directly with the new text, no preamble):"""
             cta_optimized = self.rewrite_with_llm(content, 'cta', topic)
             if cta_optimized:
                 # Validate length
-                if self._validate_variant_length(content, cta_optimized, 'CTA Enhanced'):
+                if self._validate_variant_length(content, cta_optimized, 'CTA Enhanced', platform):
                     # Validate content preservation
                     preservation = self._validate_content_preservation(content, cta_optimized)
                     if not preservation['urls_preserved']:
