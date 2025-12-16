@@ -158,6 +158,12 @@ if selected_topic:
                     
                     st.session_state.pipeline_ready = True
                     
+                    # Clear topic cache to refresh dropdown
+                    if 'available_topics_cache' in st.session_state:
+                        del st.session_state['available_topics_cache']
+                    
+                    st.rerun()  # Refresh to show new topic in dropdown
+                    
                 except Exception as e:
                     st.error(f"❌ Pipeline error: {e}")
                     st.info("Make sure Reddit API is configured in .env file")
@@ -165,13 +171,17 @@ if selected_topic:
     with col2:
         if st.button("📥 Load Existing Data", use_container_width=True):
             try:
-                # Try loading cached data
-                processed = pipeline.get_analytics_data()
-                if processed is not None and not processed.empty:
-                    st.success(f"✅ Loaded {len(processed)} posts from cache")
-                    st.session_state.pipeline_ready = True
-                else:
-                    st.warning("⚠️ No cached data found. Run pipeline first.")
+                # Force refresh from database instead of cache
+                with st.spinner("Loading fresh data from database..."):
+                    data = pipeline.collect_data(reddit_limit=reddit_limit, youtube_limit=0, force_refresh=True)
+                    processed = pipeline.process_data()
+                    stats = pipeline.compute_statistics()
+                    
+                    if processed is not None and not processed.empty:
+                        st.success(f"✅ Loaded {len(processed)} posts from database")
+                        st.session_state.pipeline_ready = True
+                    else:
+                        st.warning("⚠️ No data found in database. Run pipeline first.")
             except Exception as e:
                 st.error(f"❌ Error loading data: {e}")
     
@@ -224,7 +234,17 @@ if selected_topic and st.session_state.get('pipeline_ready'):
                         st.code(generated, language="text")
                 
                 # Predict engagement for generated content
+                # Use timestamp to ensure unique prediction
                 prediction = pipeline.predict_engagement(generated)
+                
+                # Store in session state with unique key
+                if 'predictions' not in st.session_state:
+                    st.session_state.predictions = {}
+                st.session_state.predictions['generated'] = {
+                    'content': generated,
+                    'prediction': prediction,
+                    'timestamp': datetime.now().isoformat()
+                }
                 
                 st.markdown("#### 📊 Predicted Engagement:")
                 
@@ -300,7 +320,17 @@ if selected_topic and st.session_state.get('pipeline_ready'):
         if st.button("🔍 Predict Engagement"):
             if user_content:
                 with st.spinner("Analyzing..."):
+                    # Get fresh prediction for user content
                     prediction = pipeline.predict_engagement(user_content)
+                    
+                    # Store separately from generated content
+                    if 'predictions' not in st.session_state:
+                        st.session_state.predictions = {}
+                    st.session_state.predictions['user_test'] = {
+                        'content': user_content,
+                        'prediction': prediction,
+                        'timestamp': datetime.now().isoformat()
+                    }
                     
                     st.markdown("#### 📈 Results:")
                     
