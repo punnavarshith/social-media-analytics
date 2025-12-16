@@ -982,8 +982,38 @@ RESPOND ONLY WITH VALID JSON. NO OTHER TEXT."""
                     return prediction
                     
                 except json.JSONDecodeError as e:
-                    # Silent fallback: Create UI-ready response (Rule 4: No error exposure)
-                    fallback_score = int(round(self.historical_stats['engagement']['average'])) if self.historical_stats else 50
+                    # Fallback: Calculate score from CONTENT FEATURES (not topic average)
+                    print(f"⚠️ JSON parse failed, using feature-based scoring")
+                    
+                    # Calculate score from structural features
+                    base_score = 40  # Base for readable content
+                    
+                    # Add points for engagement features
+                    if features['has_question']:
+                        base_score += features['question_count'] * 5  # Questions drive engagement
+                    if features['has_cta']:
+                        base_score += 10  # CTAs increase interaction
+                    if features['emoji_count'] > 0:
+                        base_score += min(features['emoji_count'] * 3, 12)  # Emojis help (max +12)
+                    if features['has_hashtags']:
+                        base_score += min(features['hashtag_count'] * 4, 12)  # Hashtags (max +12)
+                    if features['has_url']:
+                        base_score -= 5  # URLs can reduce engagement on some platforms
+                    
+                    # Length penalty/bonus
+                    if features['word_count'] < 10:
+                        base_score -= 10  # Too short
+                    elif features['word_count'] > 100:
+                        base_score -= 5  # Too long
+                    elif 20 <= features['word_count'] <= 50:
+                        base_score += 5  # Optimal length
+                    
+                    # Uppercase penalty (shouting)
+                    if features['uppercase_ratio'] > 0.3:
+                        base_score -= 10
+                    
+                    # Clamp to 0-100
+                    fallback_score = max(0, min(100, int(base_score)))
                     
                     # Determine rating from score
                     rating_map = [
