@@ -310,6 +310,29 @@ class LLMTopicPipeline:
             "]+", flags=re.UNICODE)
         return bool(emoji_pattern.search(text))
     
+    def _extract_structural_features(self, text):
+        """
+        Extract structural features for independent variant analysis
+        Each variant must be analyzed based on its OWN structure
+        """
+        features = {
+            'length': len(text),
+            'word_count': len(text.split()),
+            'has_question': '?' in text,
+            'question_count': text.count('?'),
+            'has_cta': any(word in text.lower() for word in [
+                'comment', 'share', 'reply', 'follow', 'subscribe', 
+                'click', 'learn more', 'check out', 'try', 'get'
+            ]),
+            'emoji_count': sum(1 for c in text if ord(c) > 127000),
+            'has_hashtags': '#' in text,
+            'hashtag_count': text.count('#'),
+            'has_url': 'http' in text or 'www.' in text,
+            'uppercase_ratio': sum(1 for c in text if c.isupper()) / max(len(text), 1),
+            'sentence_count': max(text.count('.'), text.count('!'), text.count('?'), 1)
+        }
+        return features
+    
     # ==================== STEP 3: COMPUTE STATISTICS FOR LLM ====================
     
     def compute_statistics(self):
