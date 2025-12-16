@@ -146,14 +146,15 @@ run_simulation_btn = st.button(
     key="run_campaign_simulation"
 )
 
+# Initialize session state for simulation results
+if 'simulation_results' not in st.session_state:
+    st.session_state.simulation_results = None
+
 if run_simulation_btn:
     if len(posts_to_simulate) < 2:
         st.error("⚠️ Please enter at least 2 posts to simulate a campaign!")
     else:
         with st.spinner(f"🔮 Simulating {simulation_type.lower()}..."):
-            
-            st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
-            st.markdown('<h3 class="section-header">📊 Simulation Results</h3>', unsafe_allow_html=True)
             
             # ==================== OPTIMAL TIMING ====================
             if simulation_type == "Optimal Timing":
@@ -183,34 +184,14 @@ if run_simulation_btn:
                             st.warning(f"⚠️ Post {i}: Incomplete timing data, skipping...")
                             continue
                 
+                # Store results in session state
                 if results:
-                    df_results = pd.DataFrame(results)
-                    
-                    st.markdown('<div class="success-box">', unsafe_allow_html=True)
-                    st.markdown(f"""
-                    ### ✅ Optimal Schedule Generated
-                    
-                    **📊 Total Posts:** {len(results)}  
-                    **📈 Average Predicted Engagement:** {df_results['Predicted Engagement'].mean():.1f}  
-                    **🏆 Best Performing Post:** {df_results.loc[df_results['Predicted Engagement'].idxmax(), 'Post']}
-                    """)
-                    st.markdown('</div>', unsafe_allow_html=True)
-                    
-                    st.dataframe(df_results, use_container_width=True, hide_index=True)
-                    
-                    # Chart
-                    fig = px.bar(
-                        df_results,
-                        x='Post',
-                        y='Predicted Engagement',
-                        color='Predicted Engagement',
-                        color_continuous_scale='Viridis',
-                        title='Predicted Engagement by Post',
-                        text='Predicted Engagement'
-                    )
-                    fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
-                    fig.update_layout(template='plotly_dark', height=400)
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.session_state.simulation_results = {
+                        'type': 'optimal_timing',
+                        'data': results,
+                        'platform': platform
+                    }
+                    st.success(f"✅ Simulation complete! {len(results)} posts analyzed.")
             
             # ==================== BEST PLATFORM ====================
             elif simulation_type == "Best Platform":
@@ -228,51 +209,13 @@ if run_simulation_btn:
                             'Predicted Engagement': best_platform['predicted_engagement']
                         })
                 
+                # Store results in session state
                 if results:
-                    df_results = pd.DataFrame(results)
-                    
-                    platform_counts = df_results['Best Platform'].value_counts()
-                    recommended_platform = platform_counts.index[0]
-                    
-                    st.markdown('<div class="success-box">', unsafe_allow_html=True)
-                    st.markdown(f"""
-                    ### 🎯 Recommended Platform: {recommended_platform.upper()}
-                    
-                    **📊 Analysis:**
-                    - {platform_counts.get('twitter', 0)} posts perform better on Twitter
-                    - {platform_counts.get('reddit', 0)} posts perform better on Reddit
-                    
-                    **📈 Average Engagement:** {df_results['Predicted Engagement'].mean():.1f}
-                    """)
-                    st.markdown('</div>', unsafe_allow_html=True)
-                    
-                    st.dataframe(df_results, use_container_width=True, hide_index=True)
-                    
-                    # Platform distribution
-                    col1, col2 = st.columns(2)
-                    
-                    with col1:
-                        fig = px.pie(
-                            values=platform_counts.values,
-                            names=platform_counts.index,
-                            title='Best Platform Distribution',
-                            color_discrete_sequence=['#667eea', '#764ba2']
-                        )
-                        fig.update_layout(template='plotly_dark')
-                        st.plotly_chart(fig, use_container_width=True)
-                    
-                    with col2:
-                        fig = px.bar(
-                            df_results,
-                            x='Post',
-                            y='Predicted Engagement',
-                            color='Best Platform',
-                            title='Engagement by Post & Platform',
-                            text='Predicted Engagement'
-                        )
-                        fig.update_traces(texttemplate='%{text:.1f}')
-                        fig.update_layout(template='plotly_dark')
-                        st.plotly_chart(fig, use_container_width=True)
+                    st.session_state.simulation_results = {
+                        'type': 'best_platform',
+                        'data': results
+                    }
+                    st.success(f"✅ Simulation complete! {len(results)} posts analyzed.")
             
             # ==================== FULL 7-DAY SCHEDULE ====================
             else:
@@ -294,55 +237,151 @@ if run_simulation_btn:
                             'Full DateTime': time
                         })
                     
-                    df_schedule = pd.DataFrame(schedule)
-                    
-                    # Calculate actual span (not theoretical campaign days)
-                    actual_span = (df_schedule['Full DateTime'].max() - df_schedule['Full DateTime'].min()).days
-                    
-                    st.markdown('<div class="success-box">', unsafe_allow_html=True)
-                    st.markdown(f"""
-                    ### 📅 {campaign_days}-Day Campaign Schedule
-                    
-                    **📊 Total Posts:** {len(df_schedule)}  
-                    **📆 Start Date:** {df_schedule['Date'].min()}  
-                    **📆 End Date:** {df_schedule['Date'].max()}  
-                    **📏 Actual Span:** {actual_span} days
-                    """)
-                    st.markdown('</div>', unsafe_allow_html=True)
-                    
-                    st.dataframe(
-                        df_schedule[['Post #', 'Content', 'Date', 'Day', 'Time']],
-                        use_container_width=True,
-                        hide_index=True
-                    )
-                    
-                    # Timeline visualization
-                    fig = px.scatter(
-                        df_schedule,
-                        x='Full DateTime',
-                        y='Post #',
-                        color='Day',
-                        title='Campaign Timeline',
-                        labels={'Full DateTime': 'Schedule', 'Post #': 'Post Number'},
-                        size=[10]*len(df_schedule)
-                    )
-                    fig.update_layout(template='plotly_dark', height=400)
-                    st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Day distribution
-                    day_dist = df_schedule['Day'].value_counts().reset_index()
-                    day_dist.columns = ['Day', 'Count']
-                    
-                    fig = px.bar(
-                        day_dist,
-                        x='Day',
-                        y='Count',
-                        title='Posts by Day of Week',
-                        color='Count',
-                        color_continuous_scale='Viridis'
-                    )
-                    fig.update_layout(template='plotly_dark', height=350)
-                    st.plotly_chart(fig, use_container_width=True)
+                    # Store results in session state
+                    st.session_state.simulation_results = {
+                        'type': 'full_schedule',
+                        'data': schedule,
+                        'campaign_days': campaign_days
+                    }
+                    st.success(f"✅ Simulation complete! {len(schedule)} posts scheduled.")
+
+# ==================== DISPLAY SIMULATION RESULTS ====================
+if st.session_state.simulation_results is not None:
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+    st.markdown('<h3 class="section-header">📊 Simulation Results</h3>', unsafe_allow_html=True)
+    
+    result_type = st.session_state.simulation_results['type']
+    result_data = st.session_state.simulation_results['data']
+    
+    # ==================== DISPLAY OPTIMAL TIMING ====================
+    if result_type == 'optimal_timing':
+        df_results = pd.DataFrame(result_data)
+        
+        st.markdown('<div class="success-box">', unsafe_allow_html=True)
+        st.markdown(f"""
+        ### ✅ Optimal Schedule Generated
+        
+        **📊 Total Posts:** {len(result_data)}  
+        **📈 Average Predicted Engagement:** {df_results['Predicted Engagement'].mean():.1f}  
+        **🏆 Best Performing Post:** {df_results.loc[df_results['Predicted Engagement'].idxmax(), 'Post']}
+        """)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        st.dataframe(df_results, use_container_width=True, hide_index=True)
+        
+        # Chart
+        fig = px.bar(
+            df_results,
+            x='Post',
+            y='Predicted Engagement',
+            color='Predicted Engagement',
+            color_continuous_scale='Viridis',
+            title='Predicted Engagement by Post',
+            text='Predicted Engagement'
+        )
+        fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
+        fig.update_layout(template='plotly_dark', height=400)
+        st.plotly_chart(fig, use_container_width=True)
+    
+    # ==================== DISPLAY BEST PLATFORM ====================
+    elif result_type == 'best_platform':
+        df_results = pd.DataFrame(result_data)
+        
+        platform_counts = df_results['Best Platform'].value_counts()
+        recommended_platform = platform_counts.index[0]
+        
+        st.markdown('<div class="success-box">', unsafe_allow_html=True)
+        st.markdown(f"""
+        ### 🎯 Recommended Platform: {recommended_platform.upper()}
+        
+        **📊 Analysis:**
+        - {platform_counts.get('twitter', 0)} posts perform better on Twitter
+        - {platform_counts.get('reddit', 0)} posts perform better on Reddit
+        
+        **📈 Average Engagement:** {df_results['Predicted Engagement'].mean():.1f}
+        """)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        st.dataframe(df_results, use_container_width=True, hide_index=True)
+        
+        # Platform distribution
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            fig = px.pie(
+                values=platform_counts.values,
+                names=platform_counts.index,
+                title='Best Platform Distribution',
+                color_discrete_sequence=['#667eea', '#764ba2']
+            )
+            fig.update_layout(template='plotly_dark')
+            st.plotly_chart(fig, use_container_width=True)
+        
+        with col2:
+            fig = px.bar(
+                df_results,
+                x='Post',
+                y='Predicted Engagement',
+                color='Best Platform',
+                title='Engagement by Post & Platform',
+                text='Predicted Engagement'
+            )
+            fig.update_traces(texttemplate='%{text:.1f}')
+            fig.update_layout(template='plotly_dark')
+            st.plotly_chart(fig, use_container_width=True)
+    
+    # ==================== DISPLAY FULL SCHEDULE ====================
+    elif result_type == 'full_schedule':
+        df_schedule = pd.DataFrame(result_data)
+        campaign_days = st.session_state.simulation_results.get('campaign_days', 7)
+        
+        # Calculate actual span
+        actual_span = (df_schedule['Full DateTime'].max() - df_schedule['Full DateTime'].min()).days
+        
+        st.markdown('<div class="success-box">', unsafe_allow_html=True)
+        st.markdown(f"""
+        ### 📅 {campaign_days}-Day Campaign Schedule
+        
+        **📊 Total Posts:** {len(df_schedule)}  
+        **📆 Start Date:** {df_schedule['Date'].min()}  
+        **📆 End Date:** {df_schedule['Date'].max()}  
+        **📏 Actual Span:** {actual_span} days
+        """)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        st.dataframe(
+            df_schedule[['Post #', 'Content', 'Date', 'Day', 'Time']],
+            use_container_width=True,
+            hide_index=True
+        )
+        
+        # Timeline visualization
+        fig = px.scatter(
+            df_schedule,
+            x='Full DateTime',
+            y='Post #',
+            color='Day',
+            title='Campaign Timeline',
+            labels={'Full DateTime': 'Schedule', 'Post #': 'Post Number'},
+            size=[10]*len(df_schedule)
+        )
+        fig.update_layout(template='plotly_dark', height=400)
+        st.plotly_chart(fig, use_container_width=True)
+        
+        # Day distribution
+        day_dist = df_schedule['Day'].value_counts().reset_index()
+        day_dist.columns = ['Day', 'Count']
+        
+        fig = px.bar(
+            day_dist,
+            x='Day',
+            y='Count',
+            title='Posts by Day of Week',
+            color='Count',
+            color_continuous_scale='Viridis'
+        )
+        fig.update_layout(template='plotly_dark', height=350)
+        st.plotly_chart(fig, use_container_width=True)
 
 # ==================== HISTORICAL DATA ====================
 st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
