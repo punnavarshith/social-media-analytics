@@ -338,7 +338,7 @@ if st.session_state.generated_variants:
     st.markdown("### 📋 All Variants with Change Highlights")
     
     for idx, row in df.iterrows():
-        with st.expander(f"{row['Variant']} - Score: {row['Engagement Score']:.0f}", expanded=(idx == df.index[0])):
+        with st.expander(f"{row['Variant']} - Score: {row['Predicted Engagement']:.0f}", expanded=(idx == df.index[0])):
             # Modification description
             st.info(f"**What changed:** {row['Modification']}")
             
@@ -370,7 +370,7 @@ if st.session_state.generated_variants:
             metrics_col1, metrics_col2, metrics_col3, metrics_col4 = st.columns(4)
             
             with metrics_col1:
-                st.metric("Engagement Score", f"{row['Engagement Score']:.0f}/100")
+                st.metric("Engagement Score", f"{row['Predicted Engagement']:.0f}/100")
             with metrics_col2:
                 sentiment_label = "Positive" if float(row['Sentiment']) > 0.1 else "Neutral" if float(row['Sentiment']) > -0.1 else "Negative"
                 st.metric("Sentiment", sentiment_label)
@@ -405,12 +405,12 @@ if st.session_state.generated_variants:
     fig = px.bar(
         df,
         x='Variant',
-        y='Engagement Score',
-        color='Engagement Score',
+        y='Predicted Engagement',
+        color='Predicted Engagement',
         color_continuous_scale='Viridis',
         title='Relative Engagement Score Comparison',
-        text='Engagement Score',
-        labels={'Engagement Score': 'Engagement Score (0-100)'}
+        text='Predicted Engagement',
+        labels={'Predicted Engagement': 'Engagement Score (0-100)'}
     )
     fig.update_traces(texttemplate='%{text}', textposition='outside')
     fig.update_layout(showlegend=False, height=400)
@@ -420,7 +420,7 @@ if st.session_state.generated_variants:
     # Detailed comparison table
     st.markdown("### 📈 Detailed Metrics Table")
     st.dataframe(
-        df[['Variant', 'Engagement Score', 'Sentiment', 'Readability', 'Word Count', 'Modification']],
+        df[['Variant', 'Predicted Engagement', 'Sentiment', 'Readability', 'Word Count', 'Modification']],
         use_container_width=True,
         hide_index=True
     )

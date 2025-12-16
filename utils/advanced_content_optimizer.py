@@ -518,32 +518,46 @@ Your optimized variant (FULL CONTENT, start directly):""",
             
             'clarity': f"""You are a content optimization engine.
 
+⚠️ CRITICAL LENGTH REQUIREMENT: You MUST maintain word count between {int(len(content.split()) * 0.7)} and {int(len(content.split()) * 1.3)} words.
+Any output shorter than {int(len(content.split()) * 0.7)} words will be REJECTED.
+
 You DO NOT summarize content.
 You DO NOT shorten content aggressively.
 You DO NOT remove product details.
+You DO NOT create short versions.
 
 ORIGINAL CONTENT:
 {content}
 
 ORIGINAL WORD COUNT: {len(content.split())} words
+MINIMUM REQUIRED: {int(len(content.split()) * 0.7)} words
+MAXIMUM ALLOWED: {int(len(content.split()) * 1.3)} words
 
 {topic_context}
 
 TASK: Clarity & Readability Variant
 
-RULES:
-• Improve sentence flow and readability
-• Simplify phrasing WITHOUT losing meaning
-• Keep total length between {int(len(content.split()) * 0.7)} and {int(len(content.split()) * 1.3)} words (70-130% range)
-• Preserve all product features and specifications
-• Do not reduce content depth
-• Maintain original messaging and tone
+RULES (STRICTLY ENFORCE):
+1. LENGTH PRESERVATION: Keep content at similar length (70-130% of original)
+2. Improve sentence flow and readability
+3. Simplify phrasing WITHOUT losing meaning
+4. Preserve ALL product features and specifications
+5. Do not reduce content depth or remove sentences
+6. Maintain original messaging and tone
+7. If original has multiple paragraphs, keep multiple paragraphs
 
-SELF-CHECK:
+FORBIDDEN:
+❌ Removing entire sentences
+❌ Creating summaries or condensed versions
+❌ Dropping product specifications
+❌ Making content significantly shorter
+
+SELF-CHECK (BEFORE RESPONDING):
 • Length: {int(len(content.split()) * 0.7)}-{int(len(content.split()) * 1.3)} words? ✓
 • All product details preserved? ✓
 • Better readability without content loss? ✓
 • Meaning fully preserved? ✓
+• Did I maintain similar length? ✓
 
 Your optimized variant (FULL CONTENT, start directly):""",
             
