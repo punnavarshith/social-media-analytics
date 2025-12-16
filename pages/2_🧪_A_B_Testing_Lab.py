@@ -6,6 +6,7 @@ Compare content variants and track results
 import streamlit as st
 from utils.styles import get_custom_css
 from utils.backend import get_predictor, write_to_google_sheets, send_slack_notification
+from utils.supabase_db import get_supabase_client
 import pandas as pd
 from datetime import datetime
 import plotly.express as px
@@ -33,6 +34,9 @@ st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
 # Initialize predictor
 predictor = get_predictor()
+
+# Initialize Supabase client
+supabase_client = get_supabase_client()
 
 # Initialize session state
 if 'ab_test_results' not in st.session_state:
@@ -201,14 +205,51 @@ if run_test_btn:
                 
                 st.session_state.ab_test_results = df_results
                 
-                # Save to Google Sheets
+                # Prepare data for saving
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                test_name_final = test_name if test_name else "Unnamed Test"
+                winner_variant = df_results.iloc[0]['Variant']
+                winner_confidence = df_results.iloc[0]['Confidence']
+                total_impressions = len(results) * 100  # Simulated impressions
+                
+                # Save to Supabase Database
+                saved_to_db = False
+                if supabase_client.is_connected():
+                    try:
+                        # Prepare data matching the ab_test_results table schema
+                        for _, row in df_results.iterrows():
+                            test_record = {
+                                'test_name': test_name_final,
+                                'timestamp': datetime.now().isoformat(),
+                                'variant_a': df_results.iloc[0]['Full_Content'] if df_results.iloc[0]['Variant'] == 'Variant A' else (df_results.iloc[1]['Full_Content'] if len(df_results) > 1 and df_results.iloc[1]['Variant'] == 'Variant A' else None),
+                                'variant_b': df_results.iloc[0]['Full_Content'] if df_results.iloc[0]['Variant'] == 'Variant B' else (df_results.iloc[1]['Full_Content'] if len(df_results) > 1 and df_results.iloc[1]['Variant'] == 'Variant B' else None),
+                                'variant_c': df_results.iloc[2]['Full_Content'] if len(df_results) > 2 and df_results.iloc[2]['Variant'] == 'Variant C' else None,
+                                'variant_d': df_results.iloc[3]['Full_Content'] if len(df_results) > 3 and df_results.iloc[3]['Variant'] == 'Variant D' else None,
+                                'variant_e': df_results.iloc[4]['Full_Content'] if len(df_results) > 4 and df_results.iloc[4]['Variant'] == 'Variant E' else None,
+                                'winner': winner_variant,
+                                'confidence': winner_confidence,
+                                'total_impressions': total_impressions,
+                                'notes': f"Platform: {platform}, Variants tested: {len(results)}"
+                            }
+                            
+                            # Insert only one record per test (not per variant)
+                            if supabase_client.insert_ab_test(test_record):
+                                saved_to_db = True
+                                st.success("✅ Results saved to Supabase Database (ab_test_results)")
+                            break  # Only insert one test record
+                    except Exception as e:
+                        st.warning(f"⚠️ Error saving to database: {e}")
+                else:
+                    st.info("ℹ️ Supabase not connected - skipping database save")
+                
+                # Save to Google Sheets
+                saved_to_sheets = False
                 rows_to_save = []
                 
                 for _, row in df_results.iterrows():
                     rows_to_save.append([
                         timestamp,
-                        test_name if test_name else "Unnamed Test",
+                        test_name_final,
                         platform,
                         row['Variant'],
                         row['Full_Content'],
@@ -220,8 +261,18 @@ if run_test_btn:
                 headers = ['Timestamp', 'Test_Name', 'Platform', 'Variant', 'Content', 
                           'Engagement_Score', 'Confidence', 'Sentiment']
                 
-                if write_to_google_sheets('AB_Test_Tracking', rows_to_save, headers):
-                    st.success("✅ Results saved to Google Sheets (AB_Test_Tracking)")
+                try:
+                    if write_to_google_sheets('AB_Test_Tracking', rows_to_save, headers):
+                        saved_to_sheets = True
+                        st.success("✅ Results saved to Google Sheets (AB_Test_Tracking)")
+                except Exception as e:
+                    st.warning(f"⚠️ Error saving to Google Sheets: {e}")
+                
+                # Summary message
+                if saved_to_db and saved_to_sheets:
+                    st.success("🎉 Results saved to both Database and Google Sheets!")
+                elif saved_to_db or saved_to_sheets:
+                    st.info("ℹ️ Results saved to one destination")
 
 # ==================== DISPLAY RESULTS ====================
 if st.session_state.ab_test_results is not None:
