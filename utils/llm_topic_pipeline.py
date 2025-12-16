@@ -604,12 +604,13 @@ Your response:"""
     def predict_engagement(self, content):
         """
         Predict engagement using Gemini with topic context
+        STATELESS: Each call produces independent analysis
         
         Args:
             content: Text to predict engagement for
             
         Returns:
-            dict: Prediction results
+            dict: Prediction results with unique analysis
         """
         if not self._check_gemini():
             return {"error": "Gemini API not configured"}
@@ -621,10 +622,14 @@ Your response:"""
             sleep_time = self._rate_limit_delay - time_since_last
             time.sleep(sleep_time)
         
+        # Extract structural features (for independent analysis)
+        features = self._extract_structural_features(content)
+        
         # Build prediction prompt with comprehensive framework
         context = self.generate_llm_context()
         
         # Build prompt following absolute rules (NO raw numbers exposed)
+        # Include structural features for independent analysis
         prompt = f"""{context}
 
 ━━━━━━━━━━━━━━━━━━━━━━
@@ -633,10 +638,22 @@ Platform-Aware • Realistic • Statistically Honest
 ━━━━━━━━━━━━━━━━━━━━━━
 
 TOPIC: '{self.topic}'
-PLATFORM: Inferred from content style
+PLATFORMInferred from content style
 
 CONTENT TO ANALYZE:
 "{content}"
+
+🔍 STRUCTURAL ANALYSIS (MANDATORY CONSIDERATION):
+- Length: {features['length']} characters ({features['word_count']} words)
+- Questions: {'Yes' if features['has_question'] else 'No'} ({features['question_count']} question marks)
+- Call-to-Action: {'Present' if features['has_cta'] else 'Missing'}
+- Emojis: {features['emoji_count']}
+- Hashtags: {features['hashtag_count']}
+- URL: {'Yes' if features['has_url'] else 'No'}
+- Sentences: {features['sentence_count']}
+
+⚠️ YOU MUST ANALYZE THE ABOVE STRUCTURAL FEATURES INDEPENDENTLY.
+Different structures = Different scores (even for similar topics).
 
 ━━━━━━━━━━━━━━━━━━━━━━
 🎯 YOUR MISSION
@@ -1049,16 +1066,33 @@ RESPOND ONLY WITH VALID JSON. NO OTHER TEXT."""
     
     @staticmethod
     def list_available_topics():
-        """List all topics with cached data"""
-        data_dir = 'data/topics'
-        if not os.path.exists(data_dir):
+        """List all topics from Supabase (single source of truth)"""
+        try:
+            from utils.supabase_db import get_supabase_client
+            supabase = get_supabase_client()
+            
+            # Get unique topics from Reddit data
+            query = supabase.client.table('reddit_data').select('topic').execute()
+            
+            if query.data:
+                topics = set()
+                for row in query.data:
+                    if row.get('topic'):
+                        topics.add(row['topic'])
+                return sorted(list(topics))
             return []
-        
-        topics = set()
-        for f in os.listdir(data_dir):
-            if f.endswith('_raw.pkl'):
-                topic_slug = f.replace('_raw.pkl', '')
-                topic = topic_slug.replace('_', ' ').title()
-                topics.add(topic)
-        
-        return sorted(list(topics))
+        except Exception as e:
+            print(f"⚠️ Error fetching topics from Supabase: {e}")
+            # Fallback to local cache
+            data_dir = 'data/topics'
+            if not os.path.exists(data_dir):
+                return []
+            
+            topics = set()
+            for f in os.listdir(data_dir):
+                if f.endswith('_raw.pkl'):
+                    topic_slug = f.replace('_raw.pkl', '')
+                    topic = topic_slug.replace('_', ' ').title()
+                    topics.add(topic)
+            
+            return sorted(list(topics))
